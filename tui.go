@@ -22,8 +22,7 @@ type applicationContext int
 type statusMessageTimeoutMsg applicationContext
 
 const (
-	stashContext applicationContext = iota
-	pagerContext
+	pagerContext applicationContext = iota
 )
 
 type state int
@@ -113,12 +112,11 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	// process state
 	switch m.state {
 	case stateShowStash:
-		// do nothing
 		newLstModel, lstCmd := m.list.Update(msg)
 		m.list = newLstModel
 		cmds = append(cmds, lstCmd)
 	case stateShowDocument:
-		log.Println("stateShowDocument")
+		// log.Println("stateShowDocument")
 		newPagerModel, cmd := m.pager.Update(msg)
 		m.pager = newPagerModel
 		cmds = append(cmds, cmd)
