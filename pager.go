@@ -86,10 +86,6 @@ var (
 			Background(lipgloss.AdaptiveColor{Light: "#f2f2f2", Dark: "#1B1B1B"}).
 			Render
 
-	spinnerStyle = lipgloss.NewStyle().
-			Foreground(statusBarNoteFg).
-			Background(statusBarBg)
-
 	pagerNoteInputPromptStyle = lipgloss.NewStyle().
 					Foreground(darkGray).
 					Background(yellowGreen).
@@ -205,19 +201,6 @@ func (m *pagerModel) showStatusMessage(statusMessage string) tea.Cmd {
 	m.statusMessageTimer = time.NewTimer(statusMessageTimeout)
 
 	return waitForStatusMessageTimeout(pagerContext, m.statusMessageTimer)
-}
-
-func (m *pagerModel) unload() {
-	if m.showHelp {
-		m.toggleHelp()
-	}
-	if m.statusMessageTimer != nil {
-		m.statusMessageTimer.Stop()
-	}
-	m.state = pagerStateBrowse
-	m.viewport.SetContent("")
-	m.viewport.YOffset = 0
-	m.textInput.Reset()
 }
 
 func (m pagerModel) Update(msg tea.Msg) (pagerModel, tea.Cmd) {

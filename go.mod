@@ -12,6 +12,7 @@ require (
 	github.com/mattn/go-zglob v0.0.3
 	github.com/mitchellh/hashstructure/v2 v2.0.2
 	github.com/muesli/reflow v0.3.0
+	github.com/muesli/termenv v0.11.1-0.20220212125758-44cd13922739
 	github.com/radovskyb/watcher v1.0.7
 	github.com/segmentio/ksuid v1.0.4
 	github.com/spf13/pflag v1.0.5
@@ -36,7 +37,6 @@ require (
 	github.com/microcosm-cc/bluemonday v1.0.17 // indirect
 	github.com/muesli/ansi v0.0.0-20211018074035-2e021307bc4b // indirect
 	github.com/muesli/cancelreader v0.2.2 // indirect
-	github.com/muesli/termenv v0.11.1-0.20220212125758-44cd13922739 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect

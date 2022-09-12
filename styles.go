@@ -32,47 +32,7 @@ var (
 	dimGreen     = AdaptiveColor{Light: "#72D2B0", Dark: "#0B5137"}
 )
 
-// Ulimately, we'll transition to named styles.
 var (
-	normalFg    = NewStyle().Foreground(normal).Render
-	dimNormalFg = NewStyle().Foreground(normalDim).Render
-
-	brightGrayFg    = NewStyle().Foreground(brightGray).Render
-	dimBrightGrayFg = NewStyle().Foreground(dimBrightGray).Render
-
-	grayFg     = NewStyle().Foreground(gray).Render
-	midGrayFg  = NewStyle().Foreground(midGray).Render
-	darkGrayFg = NewStyle().Foreground(darkGray).Render
-
-	greenFg        = NewStyle().Foreground(green).Render
-	semiDimGreenFg = NewStyle().Foreground(semiDimGreen).Render
-	dimGreenFg     = NewStyle().Foreground(dimGreen).Render
-
-	fuchsiaFg    = NewStyle().Foreground(fuschia).Render
-	dimFuchsiaFg = NewStyle().Foreground(dimFuchsia).Render
-
-	dullFuchsiaFg    = NewStyle().Foreground(dullFuchsia).Render
-	dimDullFuchsiaFg = NewStyle().Foreground(dimDullFuchsia).Render
-
-	indigoFg    = NewStyle().Foreground(fuschia).Render
-	dimIndigoFg = NewStyle().Foreground(dimIndigo).Render
-
-	subtleIndigoFg    = NewStyle().Foreground(subtleIndigo).Render
-	dimSubtleIndigoFg = NewStyle().Foreground(dimSubtleIndigo).Render
-
-	yellowFg     = NewStyle().Foreground(yellowGreen).Render     // renders light green on light backgrounds
-	dullYellowFg = NewStyle().Foreground(dullYellowGreen).Render // renders light green on light backgrounds
-	redFg        = NewStyle().Foreground(red).Render
-	faintRedFg   = NewStyle().Foreground(faintRed).Render
-)
-
-var (
-	tabStyle = NewStyle().
-			Foreground(AdaptiveColor{Light: "#909090", Dark: "#626262"})
-
-	selectedTabStyle = NewStyle().
-				Foreground(AdaptiveColor{Light: "#333333", Dark: "#979797"})
-
 	errorTitleStyle = NewStyle().
 			Foreground(cream).
 			Background(red).
@@ -80,6 +40,4 @@ var (
 
 	subtleStyle = NewStyle().
 			Foreground(AdaptiveColor{Light: "#9B9B9B", Dark: "#5C5C5C"})
-
-	paginationStyle = subtleStyle.Copy()
 )
