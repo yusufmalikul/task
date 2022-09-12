@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:
+  hello:
+    desc: Simple task
+    summary: |
+        This is the content for task 1
+        Second line
+        OK
+    cmds:
+      - echo 'Simple Task!'
+    silent: true
+  world:
+    desc: Simple task 2
+    summary: |
+        # Hello
+        This is the content for task 2
+        Second line
+        OK
+    cmds:
+      - echo 'Simple World!'
