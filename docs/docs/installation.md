@@ -55,15 +55,23 @@ may take some time until it's available on Scoop.
 ### AUR
 
 If you're on Arch Linux you can install Task from
-[AUR](https://aur.archlinux.org/packages/taskfile-git) using your favorite
+[AUR](https://aur.archlinux.org/packages/go-task-bin) using your favorite
 package manager such as `yay`, `pacaur` or `yaourt`:
 
 ```cmd
-yay -S taskfile-git
+yay -S go-task-bin
 ```
 
-This installation method is community owned, but since it's `-git` version of
-the package, it's always latest available version based on the Git repository.
+Alternatively, there's
+[this package](https://aur.archlinux.org/packages/go-task) which installs from
+the source code instead of downloading the binary from the
+[releases page](https://github.com/go-task/task/releases):
+
+```cmd
+yay -S go-task
+```
+
+This installation method is community owned.
 
 ### Fedora
 
@@ -88,6 +96,15 @@ nix-env -iA nixpkgs.go-task
 
 This installation method is community owned. After a new release of Task, it
 may take some time until it's available in [nixpkgs](https://github.com/NixOS/nixpkgs).
+
+### npm
+
+You can also use Node and npm to install Task by installing
+[this package](https://www.npmjs.com/package/@go-task/cli).
+
+```bash
+npm install -g @go-task/cli
+```
 
 ## Get The Binary
 
